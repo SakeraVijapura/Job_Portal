@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    {% block body %}
+
+    {% include 'navbar.html' %}
+
+    <!-- banner image section -->
+    <div>
+        <img src="{% static 'images/portal1.png' %}" alt="Banner image" class="banner-img">
+    </div>
+
+    <!-- placed students section -->
+    <div class="container">
+        <div class="placed-students-container">
+
+            <h1 class="heading desktop-text">----------| OUR PLACED STUDENTS
+                |----------</h1>
+            <h1 class="heading mobile-text">OUR PLACED STUDENTS</h1>
+            <div class="images-container">
+                <div class="img-wrapper">
+                    <img src="{% static 'images/facebook.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Facebook</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/amazon.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Amazon</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/infosys.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Infosys</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/facebook.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Facebook</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/amazon.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Amazon</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/infosys.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Infosys</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/facebook.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Facebook</p>
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{% static 'images/amazon.png' %}" alt="Placed Students image">
+                    <div class="content">
+                        <p>Amazon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    {% endblock %}
+</body>
+
+</html>

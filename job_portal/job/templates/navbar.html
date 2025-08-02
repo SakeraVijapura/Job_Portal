@@ -1,0 +1,68 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<header class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt=" Job
+                    Portal Logo" />
+        <span><strong>JobPortal</strong><br><small>Find Your
+                Career</small></span>
+    </div>
+
+    <!-- Toggle Menu Icon -->
+    <div class="toggle-wrapper">
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav">
+        <ul class="nav-links" id="navMenu">
+            <li>
+                <a href="{% url 'index' %}"
+                    class="{% if request.path == '/' %}active{% endif %}"><i
+                        class="fas fa-home"></i>Home</a>
+            </li>
+            <li>
+
+                <a href="{% url 'index' %}"><i
+                        class="fas fa-briefcase"></i> Latest
+                    Jobs</a>
+            </li>
+            <li>
+                <a href="{% url 'user_login' %}"  class="{% if request.path == '/user_login' %}active{% endif %}"><i class="fas fa-user"></i>
+                    User Login</a>
+            </li>
+            <li>
+                <a href="{% url 'recruiter_login' %}"  class="{% if request.path == '/recruiter_login' %}active{% endif %}"><i
+                        class="fas fa-user-tie"></i> Recruiter
+                    Login</a>
+            </li>
+            <li>
+                <a href="{% url 'admin_login' %}"
+                    class="{% if request.path == '/admin_login' %}active{% endif %}"><i
+                        class="fas fa-user-shield"></i> Admin
+                    Login</a>
+            </li>
+            <li>
+                <a href="{% url 'index' %}"><i
+                        class="fas fa-envelope"></i> Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('navMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            toggleBtn.classList.toggle('open');
+            toggleBtn.innerHTML = toggleBtn.classList.contains('open')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+</script>

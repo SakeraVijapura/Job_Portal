@@ -1,0 +1,120 @@
+/* banner image section */
+.banner-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    /* object-position: top; */
+}
+
+
+/* placed students section */
+.placed-students-container {
+    margin: 30px 0;
+    background-color: #2d4d56;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.placed-students-container .heading {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.placed-students-container .heading.mobile-text {
+    display: none;
+}
+
+.placed-students-container .images-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.placed-students-container .img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 80%;
+}
+
+.placed-students-container .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placed-students-container .img-wrapper .content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+@media (max-width: 992px) {
+
+    /* Placed students section */
+
+    .placed-students-container .heading {
+        margin-bottom: 40px;
+        font-size: 25px;
+    }
+
+    .placed-students-container .images-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Placed students section */
+
+    .placed-students-container .heading {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    .placed-students-container .heading.desktop-text {
+        display: none;
+    }
+
+    .placed-students-container .heading.mobile-text {
+        display: block;
+    }
+
+    .placed-students-container .images-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .placed-students-container .img-wrapper .content {
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 468px) {
+
+    /* Placed Students Section */
+    .placed-students-container .heading {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .placed-students-container .images-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .placed-students-container .img-wrapper .content {
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+}

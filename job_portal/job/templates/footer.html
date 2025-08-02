@@ -1,0 +1,54 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Links -->
+            <div class="col links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'user_login' %}">User Login</a></li>
+                    <li><a href="{% url 'recruiter_login' %}">Recruiter Login</a></li>
+                    <li><a href="{% url 'admin_login' %}">Admin Login</a></li>
+                    <li><a href="{% url 'index' %}">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Himmatnagar</li>
+                    <li><i class="fa fa-envelope"></i> xyz@gmail.com</li>
+                    <li><i class="fa fa-phone"></i> +91 9866688889</li>
+                    <li><i class="fa fa-globe"></i> www.xyzsoftware.com</li>
+                </ul>
+            </div>
+
+            <!-- Placement -->
+            <div class="col">
+                <h3>Online Placement</h3>
+                <p>Your trusted platform for campus placements and hiring solutions.</p>
+            </div>
+
+
+            <!-- Newsletter -->
+            <div class="col newsletter">
+                <h3>Newsletter</h3>
+                <form method="post" class="form-inline">
+                    {% csrf_token %}
+                    <input type="email" name="emailid" placeholder="Enter Email" class="email-control">
+                </form>
+                <div class="social-icons">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
